@@ -16,11 +16,11 @@ import {
 import { purple } from "@mui/material/colors";
 import { shuffle } from "lodash";
 import { FC, useCallback, useEffect, useState } from "react";
-import CelebrateIcon from "../assets/celebrate.png";
-import FailIcon from "../assets/fail.png";
 import { IAnswer } from "../models/Answer";
 import { IQuestion } from "../models/Question";
+import { CelebrateIcon } from "./icons/CelebrateIcon";
 import { CloseIcon } from "./icons/CloseIcon";
+import { FailIcon } from "./icons/FailIcon";
 import QuizResult from "./QuizResult";
 
 interface IQuestionPopup {
@@ -164,9 +164,15 @@ const QuestionPopup: FC<IQuestionPopup> = ({
         ) : (
           <>
             {selectedAnswer === question.answerId ? (
-              <QuizResult icon={CelebrateIcon} alt="Win" message="Correct!" />
+              <QuizResult
+                icon={<CelebrateIcon iconStyle={{ width: 40, height: 40 }} />}
+                message="Correct!"
+              />
             ) : (
-              <QuizResult icon={FailIcon} alt="Lose" message="Wrong answer" />
+              <QuizResult
+                icon={<FailIcon iconStyle={{ width: 40, height: 40 }} />}
+                message="Wrong answer"
+              />
             )}
           </>
         )}

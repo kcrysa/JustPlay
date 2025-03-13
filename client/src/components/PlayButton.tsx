@@ -1,6 +1,6 @@
 import { IconButton, IconButtonProps, styled } from "@mui/material";
 import { common } from "@mui/material/colors";
-import PlayIcon from "../assets/play.png";
+import { PlayIcon } from "./icons/PlayIcon";
 
 const CustomButton = styled(IconButton)<IconButtonProps>(() => ({
   color: common.black,
@@ -30,6 +30,6 @@ interface IPlayButton {
 
 export const PlayButton = ({ onClick }: IPlayButton) => (
   <CustomButton onClick={onClick}>
-    <img src={PlayIcon} alt="Play" style={{ width: 100 }} />
+    <PlayIcon iconStyle={{ width: 100, height: 100 }} />
   </CustomButton>
 );

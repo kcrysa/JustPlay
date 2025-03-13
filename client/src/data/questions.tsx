@@ -708,13 +708,13 @@ void change(int x, int *y)
       { id: 1, text: "Python" },
       { id: 2, text: "Node.js" },
       { id: 3, text: "Java" },
-      { id: 4, text: "All of the above" },
+      { id: 4, text: "All of the options" },
     ],
     answerId: 4,
   },
   {
     id: 27,
-    text: "Which cloud providers does not offer Serverless computing services?",
+    text: "Which cloud provider does not offer Serverless computing services?",
     answers: [
       { id: 1, text: "Amazon Web Services (AWS)" },
       { id: 2, text: "Microsoft Azure" },
@@ -807,7 +807,7 @@ void change(int x, int *y)
       { id: 2, text: "POST" },
       { id: 3, text: "PUT" },
       { id: 4, text: "DELETE" },
-      { id: 5, text: "All of the above" },
+      { id: 5, text: "All of the options" },
     ],
     answerId: 5,
   },
@@ -863,7 +863,7 @@ void change(int x, int *y)
       { id: 1, text: "A fire to warm you up" },
       { id: 2, text: "The stove" },
       { id: 3, text: "The match" },
-      { id: 4, text: "None of the above" },
+      { id: 4, text: "None of the options" },
     ],
     answerId: 3,
   },
@@ -871,7 +871,7 @@ void change(int x, int *y)
     id: 38,
     text: "If 10 pigeons sat on a wire and someone shot one, how many would be left?",
     answers: [
-      { id: 1, text: "Nine" },
+      { id: 1, text: "9" },
       { id: 2, text: "10, they missed" },
       { id: 3, text: "Poor pigeons" },
       { id: 4, text: "0" },
@@ -880,7 +880,7 @@ void change(int x, int *y)
   },
   {
     id: 39,
-    text: "A house took eight hours to be built by four men. How much time would it take one man to build it?",
+    text: "Four men built a house in eight hours. How much time will it take one man to build the same house?",
     answers: [
       { id: 1, text: "32 hours" },
       { id: 2, text: "16 hours" },
@@ -901,36 +901,14 @@ void change(int x, int *y)
     answerId: 3,
   },
   {
-    id: 41,
-    text: "In a year, how many seconds are there?",
-    answers: [
-      { id: 1, text: "31,535,000" },
-      { id: 2, text: "1,214,000" },
-      { id: 3, text: "A lot" },
-      { id: 4, text: "12" },
-    ],
-    answerId: 4,
-  },
-  {
     id: 42,
     text: "What was the highest waterfall in the world before Angel Falls was discovered?",
     answers: [
       { id: 1, text: "Yosemite Falls" },
-      { id: 2, text: "Niagra Falls" },
+      { id: 2, text: "Niagara Falls" },
       { id: 3, text: "Tugela Falls" },
       { id: 4, text: "Angel Falls" },
     ],
     answerId: 4,
-  },
-  {
-    id: 43,
-    text: "How many pies in a baker's dozen?",
-    answers: [
-      { id: 1, text: "12" },
-      { id: 2, text: "14" },
-      { id: 3, text: "13" },
-      { id: 4, text: "18" },
-    ],
-    answerId: 3,
-  },
+  }
 ];

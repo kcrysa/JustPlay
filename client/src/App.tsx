@@ -19,7 +19,7 @@ const App = () => (
     alignItems="center"
     direction="column"
     spacing={2}
-    style={{ height: "100vh" }}
+    style={{ width: "100%" }}
   >
     <Stack
       justifyContent="center"
