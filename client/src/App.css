@@ -10,6 +10,12 @@
     url("./fonts/VodafoneRg-Regular.ttf") format("truetype");
 }
 
+:root {
+  --shadow: 0 30px 40px 0 rgba(16, 36, 94, 0.2);
+  --rounded-corners: 4px;
+  --rounded-corners-large: 8px;
+}
+
 body {
   margin: 0;
   height: 100vh;
@@ -33,4 +39,69 @@ code {
   font-weight: 700;
   padding: 10px;
   width: 200px;
+}
+
+.react-pdf__Page {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  max-width: 400px;
+  width: 90vw;
+  aspect-ratio: 1 / 1.4142;
+}
+
+.react-pdf__Document {
+  border-radius: var(--rounded-corners-large);
+  max-width: 100%;
+  position: relative;
+  background-color: #fff;
+  overflow-x: scroll;
+  margin-top: 80px;
+}
+
+.page-controls {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  opacity: 1;
+  background: #fff;
+  transform: translate(-50%);
+  box-shadow: var(--shadow);
+  border-radius: var(--rounded-corners);
+  z-index: 2;
+  font-family: "VodafoneRg";
+  font-size: 1.2em;
+}
+
+.page-controls span {
+  font: inherit;
+  font-size: 0.8em;
+  padding: 0 0.5em;
+}
+
+.page-controls button {
+  width: 44px;
+  height: 44px;
+  background: #fff;
+  border: 0;
+  font: inherit;
+  font-size: 0.8em;
+  border-radius: var(--rounded-corners);
+}
+
+.page-controls button:enabled:hover {
+  cursor: pointer;
+}
+
+.page-controls button:enabled:hover,
+.page-controls button:enabled:focus {
+  background-color: #e6e6e6;
+}
+
+.page-controls button:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.page-controls button:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
