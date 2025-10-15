@@ -1,5 +1,6 @@
 export interface IQuizResponse {
   questionNumber: number;
+  category: string;
   correctAnswer: number;
   selectedAnswer: number;
   isCorrect: boolean;

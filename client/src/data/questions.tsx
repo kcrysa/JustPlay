@@ -1,10 +1,11 @@
 import { CodeBlock, dracula } from "react-code-blocks";
-import { IQuestion } from "../models/Question";
+import { IQuestion, QUESTION_CATEGORIES } from "../models/Question";
 
 export const questions: IQuestion[] = [
   {
     id: 1,
     text: "Which data structure is used for implementing a Last-In-First-Out (LIFO) behavior?",
+    category: QUESTION_CATEGORIES.TECH,
     answers: [
       {
         id: 1,
@@ -28,6 +29,7 @@ export const questions: IQuestion[] = [
   {
     id: 2,
     text: "Recursion is a method in which the solution of a problem depends on ____________",
+    category: QUESTION_CATEGORIES.TECH,
     answers: [
       {
         id: 1,
@@ -51,6 +53,7 @@ export const questions: IQuestion[] = [
   {
     id: 3,
     text: "What is the use of Git?",
+    category: QUESTION_CATEGORIES.TECH,
     answers: [
       {
         id: 1,
@@ -74,6 +77,7 @@ export const questions: IQuestion[] = [
   {
     id: 4,
     text: "If for an algorithm time complexity is given by O(n) then the complexity of it is...",
+    category: QUESTION_CATEGORIES.TECH,
     answers: [
       {
         id: 1,
@@ -96,6 +100,7 @@ export const questions: IQuestion[] = [
   },
   {
     id: 5,
+    category: QUESTION_CATEGORIES.TECH,
     text: (
       <>
         <p>Predict the output of the following program:</p>
@@ -147,6 +152,7 @@ default:
   },
   {
     id: 6,
+    category: QUESTION_CATEGORIES.TECH,
     text: (
       <>
         <p>Predict the output of the following program:</p>
@@ -194,6 +200,7 @@ int main()
   },
   {
     id: 7,
+    category: QUESTION_CATEGORIES.TECH,
     text: (
       <>
         <p>What is the output of the following program?</p>
@@ -243,6 +250,7 @@ int main()
   },
   {
     id: 8,
+    category: QUESTION_CATEGORIES.TECH,
     text: (
       <>
         <p>What will be the output of the following Java code?</p>
@@ -283,6 +291,7 @@ int main()
   },
   {
     id: 9,
+    category: QUESTION_CATEGORIES.TECH,
     text: (
       <>
         <p>What will be the output of the following code?</p>
@@ -331,6 +340,7 @@ void change(int x, int *y)
   {
     id: 10,
     text: "Which of the following is not a commonly used relational database management system?",
+    category: QUESTION_CATEGORIES.TECH,
     answers: [
       {
         id: 1,
@@ -354,6 +364,7 @@ void change(int x, int *y)
   {
     id: 11,
     text: "Which of the following commands is used to delete all rows and free up space from a table?",
+    category: QUESTION_CATEGORIES.TECH,
     answers: [
       {
         id: 1,
@@ -376,6 +387,7 @@ void change(int x, int *y)
   },
   {
     id: 12,
+    category: QUESTION_CATEGORIES.TECH,
     text: "Which of the following is not a valid aggregate function?",
     answers: [
       {
@@ -399,6 +411,7 @@ void change(int x, int *y)
   },
   {
     id: 13,
+    category: QUESTION_CATEGORIES.TECH,
     text: "What is Infrastructure as a Service (IaaS)?",
     answers: [
       {
@@ -422,6 +435,7 @@ void change(int x, int *y)
   },
   {
     id: 14,
+    category: QUESTION_CATEGORIES.BRAINTEASER,
     text: (
       <>
         <p>Consider the following logical inferences.</p>
@@ -462,6 +476,7 @@ void change(int x, int *y)
   },
   {
     id: 15,
+    category: QUESTION_CATEGORIES.BRAINTEASER,
     text: "A car has 4 tyres and 1 spare tyre. Each tyre can travel a maximum distance of 20000 miles before wearing off. What is the maximum distance the car can travel before you are forced to buy a new tyre? You are allowed to change tyres (using the spare tyre) an unlimited number of times. ",
     answers: [
       {
@@ -485,6 +500,7 @@ void change(int x, int *y)
   },
   {
     id: 16,
+    category: QUESTION_CATEGORIES.TECH,
     text: (
       <>
         <p>What does the following piece of code do?</p>
@@ -528,6 +544,7 @@ void change(int x, int *y)
   },
   {
     id: 17,
+    category: QUESTION_CATEGORIES.TECH,
     text: "Choose the recursive formula for the Fibonacci series (n>=1).",
     answers: [
       {
@@ -551,6 +568,7 @@ void change(int x, int *y)
   },
   {
     id: 18,
+    category: QUESTION_CATEGORIES.VOIS,
     text: "What does VOIS stand for?",
     answers: [
       {
@@ -574,6 +592,7 @@ void change(int x, int *y)
   },
   {
     id: 19,
+    category: QUESTION_CATEGORIES.VOIS,
     text: (
       <p>
         Which of the following is <b>not</b> a VOIS center?
@@ -601,6 +620,7 @@ void change(int x, int *y)
   },
   {
     id: 20,
+    category: QUESTION_CATEGORIES.VOIS,
     text: "We have a Technology portfolio which includes:",
     answers: [
       {
@@ -624,6 +644,7 @@ void change(int x, int *y)
   },
   {
     id: 21,
+    category: QUESTION_CATEGORIES.TECH,
     text: "What is Serverless computing?",
     answers: [
       {
@@ -647,6 +668,7 @@ void change(int x, int *y)
   },
   {
     id: 22,
+    category: QUESTION_CATEGORIES.TECH,
     text: "What is Serverless computing?",
     answers: [
       { id: 1, text: "Running applications without any server" },
@@ -658,6 +680,7 @@ void change(int x, int *y)
   },
   {
     id: 23,
+    category: QUESTION_CATEGORIES.TECH,
     text: "Which AWS service is commonly used for Serverless computing?",
     answers: [
       { id: 1, text: "Amazon S3" },
@@ -669,6 +692,7 @@ void change(int x, int *y)
   },
   {
     id: 24,
+    category: QUESTION_CATEGORIES.TECH,
     text: "What are the key differences between Serverless and Microservices?",
     answers: [
       {
@@ -692,6 +716,7 @@ void change(int x, int *y)
   },
   {
     id: 25,
+    category: QUESTION_CATEGORIES.TECH,
     text: "Which of the following are potential drawbacks of Serverless architecture?",
     answers: [
       { id: 1, text: "Cold start latency" },
@@ -703,6 +728,7 @@ void change(int x, int *y)
   },
   {
     id: 26,
+    category: QUESTION_CATEGORIES.TECH,
     text: "What language can AWS Lambda functions be written in?",
     answers: [
       { id: 1, text: "Python" },
@@ -714,6 +740,7 @@ void change(int x, int *y)
   },
   {
     id: 27,
+    category: QUESTION_CATEGORIES.TECH,
     text: "Which cloud provider does not offer Serverless computing services?",
     answers: [
       { id: 1, text: "Amazon Web Services (AWS)" },
@@ -725,6 +752,7 @@ void change(int x, int *y)
   },
   {
     id: 28,
+    category: QUESTION_CATEGORIES.TECH,
     text: 'What is the difference between "is" and "==" in Python?',
     answers: [
       {
@@ -742,6 +770,7 @@ void change(int x, int *y)
   },
   {
     id: 29,
+    category: QUESTION_CATEGORIES.TECH,
     text: "Which of the following is incorrect about Python decorators?",
     answers: [
       {
@@ -756,6 +785,7 @@ void change(int x, int *y)
   },
   {
     id: 30,
+    category: QUESTION_CATEGORIES.TECH,
     text: "Which of the following is not a valid exception handling method in Python?",
     answers: [
       { id: 1, text: "try-except" },
@@ -767,6 +797,7 @@ void change(int x, int *y)
   },
   {
     id: 31,
+    category: QUESTION_CATEGORIES.TECH,
     text: "Which of the following should be validated during functional API testing?",
     answers: [
       {
@@ -790,6 +821,7 @@ void change(int x, int *y)
   },
   {
     id: 32,
+    category: QUESTION_CATEGORIES.TECH,
     text: "Which of the following is a type of non-functional testing?",
     answers: [
       { id: 1, text: "Unit Testing" },
@@ -801,6 +833,7 @@ void change(int x, int *y)
   },
   {
     id: 33,
+    category: QUESTION_CATEGORIES.TECH,
     text: "Which HTTP methods are commonly tested in API automation?",
     answers: [
       { id: 1, text: "GET" },
@@ -813,6 +846,7 @@ void change(int x, int *y)
   },
   {
     id: 34,
+    category: QUESTION_CATEGORIES.TECH,
     text: "What is the difference between PUT and PATCH in HTTP?",
     answers: [
       {
@@ -836,6 +870,7 @@ void change(int x, int *y)
   },
   {
     id: 35,
+    category: QUESTION_CATEGORIES.BRAINTEASER,
     text: "If you have six fish and half of them are drowning, how many do you have?",
     answers: [
       { id: 1, text: "SIX" },
@@ -847,6 +882,7 @@ void change(int x, int *y)
   },
   {
     id: 36,
+    category: QUESTION_CATEGORIES.BRAINTEASER,
     text: "Take three houses. One is red, the other blue and the final one is white. The red house is to the left of the one in the middle. The blue house is right of the one in the middle. Where is the White House?",
     answers: [
       { id: 1, text: "On the left" },
@@ -858,6 +894,7 @@ void change(int x, int *y)
   },
   {
     id: 37,
+    category: QUESTION_CATEGORIES.BRAINTEASER,
     text: "You're sitting in a cabin in the dark and you are cold and hungry. You have only one match. What do you light first?",
     answers: [
       { id: 1, text: "A fire to warm you up" },
@@ -869,6 +906,7 @@ void change(int x, int *y)
   },
   {
     id: 38,
+    category: QUESTION_CATEGORIES.BRAINTEASER,
     text: "If 10 pigeons sat on a wire and someone shot one, how many would be left?",
     answers: [
       { id: 1, text: "9" },
@@ -880,6 +918,7 @@ void change(int x, int *y)
   },
   {
     id: 39,
+    category: QUESTION_CATEGORIES.BRAINTEASER,
     text: "Four men built a house in eight hours. How much time will it take one man to build the same house?",
     answers: [
       { id: 1, text: "32 hours" },
@@ -891,6 +930,7 @@ void change(int x, int *y)
   },
   {
     id: 40,
+    category: QUESTION_CATEGORIES.BRAINTEASER,
     text: "Heavy it is but reverse it's not?",
     answers: [
       { id: 1, text: "Metal" },
@@ -902,6 +942,7 @@ void change(int x, int *y)
   },
   {
     id: 42,
+    category: QUESTION_CATEGORIES.BRAINTEASER,
     text: "What was the highest waterfall in the world before Angel Falls was discovered?",
     answers: [
       { id: 1, text: "Yosemite Falls" },
@@ -910,5 +951,53 @@ void change(int x, int *y)
       { id: 4, text: "Angel Falls" },
     ],
     answerId: 4,
-  }
+  },
+  {
+    id: 43,
+    category: QUESTION_CATEGORIES.BRAINTEASER,
+    text: "If X $ Y means X multiplied by the cube of Y, find the value of 2 $ 3.",
+    answers: [
+      { id: 1, text: "6" },
+      { id: 2, text: "18" },
+      { id: 3, text: "27" },
+      { id: 4, text: "54" },
+    ],
+    answerId: 4,
+  },
+  {
+    id: 44,
+    category: QUESTION_CATEGORIES.BRAINTEASER,
+    text: "X introduces Y saying, 'He is the husband of the grand daughter of the father of my father'. How is Y related to X?",
+    answers: [
+      { id: 1, text: "brother" },
+      { id: 2, text: "uncle" },
+      { id: 3, text: "cousin" },
+      { id: 4, text: "brother-in-law" },
+    ],
+    answerId: 4,
+  },
+  {
+    id: 45,
+    category: QUESTION_CATEGORIES.BRAINTEASER,
+    text: "What word becomes shorter when you add two letters to it?",
+    answers: [
+      { id: 1, text: "shorter" },
+      { id: 2, text: "long" },
+      { id: 3, text: "short" },
+      { id: 4, text: "wide" },
+    ],
+    answerId: 3,
+  },
+  {
+    id: 46,
+    category: QUESTION_CATEGORIES.BRAINTEASER,
+    text: "What weighs more, a pound of iron or a pound of feathers?",
+    answers: [
+      { id: 1, text: "Iron" },
+      { id: 2, text: "Feathers" },
+      { id: 3, text: "None" },
+      { id: 4, text: "Both same" },
+    ],
+    answerId: 4,
+  },
 ];

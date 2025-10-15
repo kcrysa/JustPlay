@@ -48,9 +48,10 @@ app.post("/api/responses", async (req, res) => {
     const quizResponse: QuizResponse = req.body;
     const client = await pool.connect();
     await client.query({
-      text: `insert into ${RESPONSES_TABLE}(\"questionNumber\", \"correctAnswer\", \"selectedAnswer\", \"isCorrect\", \"aborted\", \"date\") values ($1, $2, $3, $4, $5, $6)`,
+      text: `insert into ${RESPONSES_TABLE}(\"questionNumber\", \"category\", \"correctAnswer\", \"selectedAnswer\", \"isCorrect\", \"aborted\", \"date\") values ($1, $2, $3, $4, $5, $6, $7)`,
       values: [
         quizResponse.questionNumber,
+        quizResponse.category,
         quizResponse.correctAnswer,
         quizResponse.selectedAnswer,
         quizResponse.isCorrect,

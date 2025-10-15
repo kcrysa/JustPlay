@@ -1,21 +1,27 @@
+import { Paper, Stack, Typography } from "@mui/material";
 import axios from "axios";
 import moment from "moment";
 import { useCallback, useState } from "react";
 import "../App.css";
 import { questions } from "../data/questions";
-import { IQuestion } from "../models/Question";
+import { IQuestion, QUESTION_CATEGORIES } from "../models/Question";
 import { IQuizResponse } from "../models/QuizResponse";
-import { PlayButton } from "./PlayButton";
+import { PlayByCategoryButton } from "./PlayByCategoryButton";
 import QuestionPopup from "./QuestionPopup";
 
 const Quiz = () => {
   const [questionPopupOpen, setQuestionPopupOpen] = useState<boolean>(false);
   const [question, setQuestion] = useState<IQuestion | null>(null);
 
-  const onShowQuestionHandler = () => {
-    const questionNumber = Math.floor(Math.random() * questions.length);
+  const onShowQuestionHandler = (category: string) => {
+    const questionsByCategory = questions.filter(
+      (q: IQuestion) => q.category === category
+    );
+    const questionNumber = Math.floor(
+      Math.random() * questionsByCategory.length
+    );
 
-    setQuestion(questions[questionNumber]);
+    setQuestion(questionsByCategory[questionNumber]);
     setQuestionPopupOpen(true);
   };
 
@@ -25,6 +31,7 @@ const Quiz = () => {
 
       const quizResponse: IQuizResponse = {
         questionNumber: question.id,
+        category: question.category,
         correctAnswer: question.answerId,
         selectedAnswer: answerId,
         isCorrect: question.answerId === answerId,
@@ -44,6 +51,7 @@ const Quiz = () => {
       if (isCancel) {
         const quizResponse: IQuizResponse = {
           questionNumber: question.id,
+          category: question.category,
           correctAnswer: question.answerId,
           selectedAnswer: 0,
           isCorrect: false,
@@ -64,7 +72,32 @@ const Quiz = () => {
   return (
     <>
       {question === null ? (
-        <PlayButton onClick={onShowQuestionHandler} />
+        <Stack width={600} alignItems="center" spacing={10}>
+          <Paper
+            elevation={2}
+            sx={{ width: "100%", textAlign: "center", padding: 1 }}
+          >
+            <Typography fontSize={40} fontWeight={600} color="#ffffff">
+              Choose your Question Category
+            </Typography>
+          </Paper>
+          <Stack width="100%" direction="row" justifyContent="space-between">
+            <PlayByCategoryButton
+              category={QUESTION_CATEGORIES.TECH}
+              onClick={() => onShowQuestionHandler(QUESTION_CATEGORIES.TECH)}
+            />
+            <PlayByCategoryButton
+              category={QUESTION_CATEGORIES.BRAINTEASER}
+              onClick={() =>
+                onShowQuestionHandler(QUESTION_CATEGORIES.BRAINTEASER)
+              }
+            />
+          </Stack>
+          <PlayByCategoryButton
+            category={QUESTION_CATEGORIES.VOIS}
+            onClick={() => onShowQuestionHandler(QUESTION_CATEGORIES.VOIS)}
+          />
+        </Stack>
       ) : (
         <QuestionPopup
           open={questionPopupOpen}
