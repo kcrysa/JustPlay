@@ -11,6 +11,10 @@ export interface IQuestion {
 
 export const QUESTION_CATEGORIES = {
   TECH: "tech",
+  PLATFORMS_AND_AUTOMATION: "platforms and automation",
+  AWS: "aws",
+  GCP: "gcp",
+  TERRAFORM: "terraform",
   BRAINTEASER: "brainteaser",
   VOIS: "vois",
 };

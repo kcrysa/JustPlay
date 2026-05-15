@@ -15,10 +15,10 @@ const Quiz = () => {
 
   const onShowQuestionHandler = (category: string) => {
     const questionsByCategory = questions.filter(
-      (q: IQuestion) => q.category === category
+      (q: IQuestion) => q.category === category,
     );
     const questionNumber = Math.floor(
-      Math.random() * questionsByCategory.length
+      Math.random() * questionsByCategory.length,
     );
 
     setQuestion(questionsByCategory[questionNumber]);
@@ -41,7 +41,7 @@ const Quiz = () => {
 
       await axios.post("/api/responses", quizResponse);
     },
-    [question]
+    [question],
   );
 
   const onQuizClose = useCallback(
@@ -66,7 +66,7 @@ const Quiz = () => {
       setQuestionPopupOpen(false);
       setQuestion(null);
     },
-    [question]
+    [question],
   );
 
   return (
@@ -83,20 +83,30 @@ const Quiz = () => {
           </Paper>
           <Stack width="100%" direction="row" justifyContent="space-between">
             <PlayByCategoryButton
-              category={QUESTION_CATEGORIES.TECH}
-              onClick={() => onShowQuestionHandler(QUESTION_CATEGORIES.TECH)}
+              category={QUESTION_CATEGORIES.AWS}
+              onClick={() => onShowQuestionHandler(QUESTION_CATEGORIES.AWS)}
             />
             <PlayByCategoryButton
-              category={QUESTION_CATEGORIES.BRAINTEASER}
+              category={QUESTION_CATEGORIES.GCP}
+              onClick={() => onShowQuestionHandler(QUESTION_CATEGORIES.GCP)}
+            />
+          </Stack>
+          <Stack width="100%" direction="row" justifyContent="space-between">
+            <PlayByCategoryButton
+              category={QUESTION_CATEGORIES.TERRAFORM}
               onClick={() =>
-                onShowQuestionHandler(QUESTION_CATEGORIES.BRAINTEASER)
+                onShowQuestionHandler(QUESTION_CATEGORIES.TERRAFORM)
+              }
+            />
+            <PlayByCategoryButton
+              category={QUESTION_CATEGORIES.PLATFORMS_AND_AUTOMATION}
+              onClick={() =>
+                onShowQuestionHandler(
+                  QUESTION_CATEGORIES.PLATFORMS_AND_AUTOMATION,
+                )
               }
             />
           </Stack>
-          <PlayByCategoryButton
-            category={QUESTION_CATEGORIES.VOIS}
-            onClick={() => onShowQuestionHandler(QUESTION_CATEGORIES.VOIS)}
-          />
         </Stack>
       ) : (
         <QuestionPopup

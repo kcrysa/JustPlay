@@ -1000,4 +1000,717 @@ void change(int x, int *y)
     ],
     answerId: 4,
   },
+  {
+    id: 47,
+    category: QUESTION_CATEGORIES.TERRAFORM,
+    text: "What is a state in Terraform?",
+    answers: [
+      {
+        id: 1,
+        text: "State is a JSON file which keeps track of metadata and mappings between resources and remote objects.",
+      },
+      {
+        id: 2,
+        text: 'State is an attribute of a Terraform resource describing its current lifecycle; for example, "destroyed".',
+      },
+      { id: 3, text: "State is an immutable type of Terraform resource." },
+      {
+        id: 4,
+        text: "State is an extension to Terraform which allows external providers to be used.",
+      },
+    ],
+    answerId: 1,
+  },
+  {
+    id: 48,
+    category: QUESTION_CATEGORIES.TERRAFORM,
+    text: 'What is the "taint" operation used for in Terraform?',
+    answers: [
+      {
+        id: 1,
+        text: 'It marks resources to be destroyed and recreated on the next execution of "apply".',
+      },
+      {
+        id: 2,
+        text: 'It allows properties of the resource to be changed directly in the Terraform state without using the "apply" command.',
+      },
+      {
+        id: 3,
+        text: "It rewrites all Terraform configuration files to a canonical format.",
+      },
+      {
+        id: 4,
+        text: "It is used to convert HCL configuration files into JSON.",
+      },
+    ],
+    answerId: 1,
+  },
+  {
+    id: 49,
+    category: QUESTION_CATEGORIES.TERRAFORM,
+    text: "When is State Locking performed in Terraform?",
+    answers: [
+      {
+        id: 1,
+        text: 'Locking happens automatically on any request to edit or read the state, and it blocks "write" operations only.',
+      },
+      {
+        id: 2,
+        text: "Locking happens automatically on any request to edit the state file, and it blocks all other I/O operations.",
+      },
+      {
+        id: 3,
+        text: "Locking happens automatically on any request to edit or read the state file, and it blocks all other I/O operations.",
+      },
+      {
+        id: 4,
+        text: 'Locking happens automatically on any request to edit the state file, and it blocks "write" operations only.',
+      },
+    ],
+    answerId: 4,
+  },
+  {
+    id: 50,
+    category: QUESTION_CATEGORIES.TERRAFORM,
+    text: "Select one false statement about Terraform imports:",
+    answers: [
+      {
+        id: 1,
+        text: 'Importing may result in a "complex import" where multiple resources are imported at once and extra changes in the terraform code are required to prevent their destruction.',
+      },
+      {
+        id: 2,
+        text: "Importing a resource does not require a state to be locked.",
+      },
+      {
+        id: 3,
+        text: "Only some types of resources can be imported, and this depends on the specific implementation in the provider.",
+      },
+      {
+        id: 4,
+        text: 'It is possible to import resources with the "count" or "for_each" attribute defined in the configuration file.',
+      },
+    ],
+    answerId: 2,
+  },
+  {
+    id: 51,
+    category: QUESTION_CATEGORIES.TERRAFORM,
+    text: "Choose one sentence which does not compare data source and resource correctly:",
+    answers: [
+      {
+        id: 1,
+        text: "Both resources and data sources can use count/for_each to be created multiple times.",
+      },
+      {
+        id: 2,
+        text: "In order to access any of the data source objects, both data source and resource are to be accessed from a namespace called 'data' while resources may be reached directly via their types and names.",
+      },
+      {
+        id: 3,
+        text: "The data source is an immutable object, whereas resources may be modified.",
+      },
+      {
+        id: 4,
+        text: 'Both resources and data sources can be imported from the Terraform CLI using "import".',
+      },
+    ],
+    answerId: 4,
+  },
+  {
+    id: 52,
+    category: QUESTION_CATEGORIES.TERRAFORM,
+    text: "Select a false statement about configuring providers in Terraform:",
+    answers: [
+      { id: 1, text: "Each provider type can have only one configuration." },
+      {
+        id: 2,
+        text: "A resource can explicitly define which provider will manage its configuration.",
+      },
+      {
+        id: 3,
+        text: "Providers can use attributes of other resources for configuration.",
+      },
+      {
+        id: 4,
+        text: "Provider configuration can be defined with variables or local values.",
+      },
+    ],
+    answerId: 1,
+  },
+  {
+    id: 53,
+    category: QUESTION_CATEGORIES.TERRAFORM,
+    text: "Choose a non-recommended way to store Terraform state files when working in a team:",
+    answers: [
+      {
+        id: 1,
+        text: "Storing JSON state files in Git (or another version control system).",
+      },
+      {
+        id: 2,
+        text: "Using key value storage in Consul for managing Terraform states.",
+      },
+      { id: 3, text: "Storing state files as blobs in a S3 bucket." },
+      {
+        id: 4,
+        text: "Storing state files in the Terraform Cloud for remote execution.",
+      },
+    ],
+    answerId: 1,
+  },
+  {
+    id: 54,
+    category: QUESTION_CATEGORIES.TERRAFORM,
+    text: 'Select one sentence which doesn\'t describe both "object" and "map" types in Terraform:',
+    answers: [
+      { id: 1, text: "Only objects may use their keys as named attributes." },
+      { id: 2, text: "It may be represented as a JSON object." },
+      {
+        id: 3,
+        text: 'It can be used as an argument for a "for_each" attribute.',
+      },
+      {
+        id: 4,
+        text: "It could be merged with another object/map by using the correct Terraform function, merge.",
+      },
+    ],
+    answerId: 1,
+  },
+  {
+    id: 55,
+    category: QUESTION_CATEGORIES.TERRAFORM,
+    text: "Select one false statement about DRY methodologies implemented in Terraform:",
+    answers: [
+      {
+        id: 1,
+        text: "They define repeated Terraform expressions in the locals block.",
+      },
+      {
+        id: 2,
+        text: 'They use a "for_each" attribute which allows a list of resources based on the set to be created.',
+      },
+      {
+        id: 3,
+        text: 'They use a "count" attribute which allows a list of resources based on an integer to be created.',
+      },
+      {
+        id: 4,
+        text: "They wrap infrastructure elements into modules, which allow extra abstraction layers to be created.",
+      },
+    ],
+    answerId: 2,
+  },
+  {
+    id: 56,
+    category: QUESTION_CATEGORIES.TERRAFORM,
+    text: "Select the resources lifecycle meta-argument configuration which doesn't exist:",
+    answers: [
+      { id: 1, text: "prevent_destroy" },
+      { id: 2, text: "recreate" },
+      { id: 3, text: "ignore_changes" },
+      { id: 4, text: "create_before_destroy" },
+    ],
+    answerId: 2,
+  },
+  {
+    id: 57,
+    category: QUESTION_CATEGORIES.TERRAFORM,
+    text: 'Under what circumstances should the "depends_on" meta-argument be used?',
+    answers: [
+      {
+        id: 1,
+        text: "When one resource needs to access values of another before applying it.",
+      },
+      {
+        id: 2,
+        text: "To explicitly define the execution sequence so the code becomes more readable.",
+      },
+      {
+        id: 3,
+        text: "To prevent cycles in applying a Terraform configuration.",
+      },
+      {
+        id: 4,
+        text: "To control the lifecycle of the infrastructure and thus control the access time to the resource attributes.",
+      },
+    ],
+    answerId: 4,
+  },
+  {
+    id: 58,
+    category: QUESTION_CATEGORIES.TERRAFORM,
+    text: "Which method is not recommended for modifying a Terraform state without executing plan/destroy?",
+    answers: [
+      {
+        id: 1,
+        text: "Using the import command to include a manual configuration of the provider in the state file.",
+      },
+      {
+        id: 2,
+        text: "Using the rm command to exclude Terraform resources from the configuration.",
+      },
+      {
+        id: 3,
+        text: "Using the state push command to apply the modified state.",
+      },
+      {
+        id: 4,
+        text: "Using the mv command to refactor an existing configuration.",
+      },
+    ],
+    answerId: 3,
+  },
+  {
+    id: 59,
+    category: QUESTION_CATEGORIES.TERRAFORM,
+    text: "What is a dynamic block?",
+    answers: [
+      {
+        id: 1,
+        text: 'It is a nested configuration block within the resource created using a "for_each" attribute.',
+      },
+      {
+        id: 2,
+        text: 'It can be a resource, or just a part of one, created dynamically by using a "count" attribute.',
+      },
+      {
+        id: 3,
+        text: "It is a way to template Terraform code using loops and if statements.",
+      },
+      {
+        id: 4,
+        text: "As a static configuration tool, Terraform does not support the creation of dynamic blocks in the configuration.",
+      },
+    ],
+    answerId: 1,
+  },
+  {
+    id: 60,
+    category: QUESTION_CATEGORIES.GCP,
+    text: "Your company plans to migrate a petabyte data set to the cloud. The requirement is to have high SLA and a SQL interface to access the data. What is the best option for storing the data?",
+    answers: [
+      { id: 1, text: "Insert the data into CloudSQL" },
+      { id: 2, text: "Stream the data into Cloud Datastore" },
+      { id: 3, text: "Insert the data into BigQuery" },
+      { id: 4, text: "Upload flat files to Cloud Storage" },
+    ],
+    answerId: 3,
+  },
+  {
+    id: 61,
+    category: QUESTION_CATEGORIES.GCP,
+    text: "How do you introduce tags in order to use them in a tag-based firewall configuration?",
+    answers: [
+      {
+        id: 1,
+        text: "Using the following command: gcloud compute instances add-tag my-instance –tags tag1",
+      },
+      {
+        id: 2,
+        text: "Using the following command: gcloud network firewall add-tag my-firewall –tags tag1",
+      },
+      {
+        id: 3,
+        text: "Using the following command: gcloud compute networks add-tag my-network –tags tag1",
+      },
+    ],
+    answerId: 1,
+  },
+  {
+    id: 62,
+    category: QUESTION_CATEGORIES.GCP,
+    text: "What is the name of the GCP service which you can use in an IaaC approach?",
+    answers: [
+      { id: 1, text: "Cloud Terraform" },
+      { id: 2, text: "Cloud Deployment Manager" },
+      { id: 3, text: "Cloud Resources Manager" },
+      { id: 4, text: "Cloud Deploy" },
+    ],
+    answerId: 2,
+  },
+  {
+    id: 63,
+    category: QUESTION_CATEGORIES.GCP,
+    text: "The GCP App Engine flexible environment is based on:",
+    answers: [
+      { id: 1, text: "Google Kubernetes Engine" },
+      { id: 2, text: "Compute Engine" },
+      { id: 3, text: "Custom Google infrastructure" },
+      { id: 4, text: "BigTable" },
+    ],
+    answerId: 2,
+  },
+  {
+    id: 64,
+    category: QUESTION_CATEGORIES.GCP,
+    text: "You’ve been asked to design an analytical and reporting tool in the company, which requires a relational database and should be able to operate on terabytes of data. What is the recommended GCP service?",
+    answers: [
+      { id: 1, text: "Enable IAM integration" },
+      { id: 2, text: "Use Cloud SQL proxy" },
+      { id: 3, text: "Use Identity aware proxy" },
+      { id: 4, text: "Use secure root password" },
+    ],
+    answerId: 2,
+  },
+  {
+    id: 65,
+    category: QUESTION_CATEGORIES.GCP,
+    text: "How can the cache hit ratio for Cloud CDN be improved for static content delivered via HTTP/HTTPS?",
+    answers: [
+      { id: 1, text: "Reduce TTL and expiration time" },
+      { id: 2, text: "Use the custom cache keys feature" },
+      { id: 3, text: "Reduce the size of the static content, images etc." },
+      { id: 4, text: "Set “Cache-region” HTTP header to the closest region" },
+    ],
+    answerId: 2,
+  },
+  {
+    id: 66,
+    category: QUESTION_CATEGORIES.GCP,
+    text: "Which external services are officially supported by the Cloud Monitoring agent?",
+    answers: [
+      { id: 1, text: "AWS Lambda" },
+      { id: 2, text: "Azure Virtual Machines" },
+      { id: 3, text: "AWS EC2" },
+      { id: 4, text: "Azure Functions" },
+    ],
+    answerId: 3,
+  },
+  {
+    id: 67,
+    category: QUESTION_CATEGORIES.GCP,
+    text: "Which kind of open source agents can be used in the Google Stackdriver Suite?",
+    answers: [
+      { id: 1, text: "CollectD" },
+      { id: 2, text: "FluentD" },
+      { id: 3, text: "StatsD" },
+      { id: 4, text: "SystemD" },
+    ],
+    answerId: 1,
+  },
+  {
+    id: 68,
+    category: QUESTION_CATEGORIES.PLATFORMS_AND_AUTOMATION,
+    text: "Which tool should a company use to automate deploying, configuring, and managing virtual machines and containers?",
+    answers: [
+      { id: 1, text: "Ansible" },
+      { id: 2, text: "Terraform" },
+      { id: 3, text: "Kubernetes" },
+      { id: 4, text: "Docker" },
+    ],
+    answerId: 3,
+  },
+  {
+    id: 69,
+    category: QUESTION_CATEGORIES.PLATFORMS_AND_AUTOMATION,
+    text: "Suppose you are using Ansible to automate the configuration of a new web server. Which modules would you use to install the Nginx web server?",
+    answers: [
+      { id: 1, text: "Yum" },
+      { id: 2, text: "apt" },
+      { id: 3, text: "pip" },
+      { id: 4, text: "git" },
+    ],
+    answerId: 2,
+  },
+  {
+    id: 70,
+    category: QUESTION_CATEGORIES.PLATFORMS_AND_AUTOMATION,
+    text: "As a DevOps engineer responsible for managing a Kubernetes cluster, which commands would you use to list all the pods running in the cluster?",
+    answers: [
+      { id: 1, text: "kubectl get deployments" },
+      { id: 2, text: "kubectl get nodes" },
+      { id: 3, text: "kubectl get pods" },
+      { id: 4, text: "kubectl get services" },
+    ],
+    answerId: 3,
+  },
+  {
+    id: 71,
+    category: QUESTION_CATEGORIES.PLATFORMS_AND_AUTOMATION,
+    text: "As you have already created a new Docker image with the updated code, you want to deploy a new version of your application to your Kubernetes cluster. What Kubernetes object can you use to update the running pods with the new image?",
+    answers: [
+      { id: 1, text: "Pod" },
+      { id: 2, text: "ReplicaSet" },
+      { id: 3, text: "Deployment" },
+      { id: 4, text: "StatefulSet" },
+    ],
+    answerId: 3,
+  },
+  {
+    id: 72,
+    category: QUESTION_CATEGORIES.PLATFORMS_AND_AUTOMATION,
+    text: "Which Ansible module would you use to ensure a specific package is installed on a new web server while configuring the server?",
+    answers: [
+      { id: 1, text: "apt" },
+      { id: 2, text: "yum" },
+      { id: 3, text: "package" },
+      { id: 4, text: "install_package" },
+    ],
+    answerId: 3,
+  },
+  {
+    id: 73,
+    category: QUESTION_CATEGORIES.PLATFORMS_AND_AUTOMATION,
+    text: "Your team is responsible for managing a large-scale infrastructure with multiple servers. You must ensure the servers are configured with the latest security updates. Which tool will you use for this purpose?",
+    answers: [
+      { id: 1, text: "Ansible" },
+      { id: 2, text: "Terraform" },
+      { id: 3, text: "Kubernetes" },
+      { id: 4, text: "Helm" },
+    ],
+    answerId: 1,
+  },
+  {
+    id: 74,
+    category: QUESTION_CATEGORIES.PLATFORMS_AND_AUTOMATION,
+    text: "As an employee, you deployed a stateful application on a Kubernetes cluster, which requires a persistent volume backed by a remote storage system. Which Kubernetes object would you use to define this persistent volume, and which type of Kubernetes resource would you use to consume it?",
+    answers: [
+      {
+        id: 1,
+        text: "PersistentVolume object and consume using a StatefulSet resource",
+      },
+      {
+        id: 2,
+        text: "StorageClass object and consume using a StatefulSet resource",
+      },
+      {
+        id: 3,
+        text: "PersistentVolumeClaim object and consume using a Deployment resource",
+      },
+      {
+        id: 4,
+        text: "StorageClass object and consume using a Deployment resource",
+      },
+    ],
+    answerId: 1,
+  },
+  {
+    id: 75,
+    category: QUESTION_CATEGORIES.PLATFORMS_AND_AUTOMATION,
+    text: "Your organization uses Kubernetes for container orchestration. Your team is currently facing issues with container networking, and you suspect a problem with the Kubernetes networking model. Which networking models are used in Kubernetes by default?",
+    answers: [
+      { id: 1, text: "Overlay" },
+      { id: 2, text: "Bridge" },
+      { id: 3, text: "Host-gateway" },
+      { id: 4, text: "IP per container" },
+    ],
+    answerId: 2,
+  },
+  {
+    id: 76,
+    category: QUESTION_CATEGORIES.PLATFORMS_AND_AUTOMATION,
+    text: "Name the Kubernetes object you would use to manage a Kubernetes cluster for your organization and ensure that a pod always has specific resources.",
+    answers: [
+      { id: 1, text: "Deployment" },
+      { id: 2, text: "Pod" },
+      { id: 3, text: "Service" },
+      { id: 4, text: "LimitRange" },
+    ],
+    answerId: 4,
+  },
+  {
+    id: 77,
+    category: QUESTION_CATEGORIES.PLATFORMS_AND_AUTOMATION,
+    text: "Your company uses Kubernetes for container orchestration and recently adopted Ansible for configuration management. The team faces an issue where the application's environment variables must be updated frequently. Which approach would be the most efficient way to manage these environment variables using Ansible?",
+    answers: [
+      {
+        id: 1,
+        text: "Use Ansible to create Kubernetes ConfigMaps and mount them as environment variables inside the containers",
+      },
+      {
+        id: 2,
+        text: "Use Ansible inventory files to store environment variables and run an Ansible playbook every time an update is required",
+      },
+      {
+        id: 3,
+        text: "Use Ansible to modify the Dockerfile and rebuild the container image each time an environment variable needs to be updated",
+      },
+      {
+        id: 4,
+        text: "Use Ansible to update environment variables directly in the Kubernetes deployment YAML files",
+      },
+    ],
+    answerId: 1,
+  },
+  {
+    id: 78,
+    category: QUESTION_CATEGORIES.PLATFORMS_AND_AUTOMATION,
+    text: "How can an organization apply a single command for Terraform and Ansible changes? The organization uses Terraform to manage infrastructure and Ansible configures software on provisioned instances. Ensure that Terraform changes are applied before Ansible changes.",
+    answers: [
+      {
+        id: 1,
+        text: "Use Terraform local-exec provisioner to call an Ansible playbook after applying Terraform changes",
+      },
+      {
+        id: 2,
+        text: "Use Ansible's Terraform module to call Terraform from an Ansible playbook",
+      },
+      {
+        id: 3,
+        text: "Use Terraform Ansible provisioner to call Ansible from a Terraform script",
+      },
+      {
+        id: 4,
+        text: "Use a custom script that runs 'terraform apply' and 'ansible-playbook' in sequence",
+      },
+    ],
+    answerId: 1,
+  },
+  {
+    id: 79,
+    category: QUESTION_CATEGORIES.PLATFORMS_AND_AUTOMATION,
+    text: "Without causing downtime, how should a company automate rolling updates while migrating its applications to a Kubernetes cluster using Ansible for application configuration?",
+    answers: [
+      {
+        id: 1,
+        text: "Use Kubernetes rolling updates with readiness and liveness probes to ensure zero downtime during the update process",
+      },
+      {
+        id: 2,
+        text: "Use Ansible to update the application configuration and restart the affected pods",
+      },
+      {
+        id: 3,
+        text: "Use Terraform to create new Kubernetes deployments with the updated application configuration and manually switch traffic between the old and new deployments",
+      },
+      {
+        id: 4,
+        text: "Use Kubernetes to create new pods with the updated application configuration and manually delete the old pods",
+      },
+    ],
+    answerId: 1,
+  },
+  {
+    id: 80,
+    category: QUESTION_CATEGORIES.PLATFORMS_AND_AUTOMATION,
+    text: "A team is working on a project that uses Terraform to manage infrastructure, Kubernetes for container orchestration, and Ansible for configuration management. During the development phase, a change is made to Terraform configuration files. Which command should be run first to validate the changes and ensure that the infrastructure will be updated correctly?",
+    answers: [
+      { id: 1, text: "terraform validate" },
+      { id: 2, text: "ansible-playbook --syntax-check" },
+      { id: 3, text: "terraform apply" },
+      { id: 4, text: "kubectl apply -f" },
+    ],
+    answerId: 1,
+  },
+  {
+    id: 81,
+    category: QUESTION_CATEGORIES.PLATFORMS_AND_AUTOMATION,
+    text: "A company is using Terraform to manage infrastructure for their Kubernetes-based application. They want to create a robust backup and recovery strategy for their Terraform state files. Which option is the most recommended approach to achieve this goal?",
+    answers: [
+      {
+        id: 1,
+        text: "Store the Terraform state files on a local disk and use a cron job to back them up regularly",
+      },
+      {
+        id: 2,
+        text: "Use a distributed version control system like Git to store and manage the Terraform state files",
+      },
+      {
+        id: 3,
+        text: "Use remote state storage with backend locking and versioning, and create regular backups",
+      },
+      {
+        id: 4,
+        text: "Store the Terraform state files in a shared network folder and use a backup tool to create regular backups",
+      },
+    ],
+    answerId: 3,
+  },
+  {
+    id: 82,
+    category: QUESTION_CATEGORIES.AWS,
+    text: "A company wants to migrate its on-premises infrastructure to the cloud. Which services can be used to migrate a physical server to AWS?",
+    answers: [
+      { id: 1, text: "AWS Server Migration Service (SMS)" },
+      { id: 2, text: "Amazon Elastic Compute Cloud (EC2)" },
+      { id: 3, text: "AWS Direct Connect" },
+      { id: 4, text: "Amazon Simple Storage Service (S3)" },
+    ],
+    answerId: 1,
+  },
+  {
+    id: 83,
+    category: QUESTION_CATEGORIES.AWS,
+    text: "A web application requiring high performance and low latency is to be deployed by a company on AWS. Which services can be used to achieve this?",
+    answers: [
+      { id: 1, text: "Amazon SNS" },
+      { id: 2, text: "Amazon SQS" },
+      { id: 3, text: "Amazon CloudFront" },
+      { id: 4, text: "Amazon S3" },
+    ],
+    answerId: 3,
+  },
+  {
+    id: 84,
+    category: QUESTION_CATEGORIES.AWS,
+    text: "Suppose a company plans to deploy a web application on Azure. The application requires secure and encrypted communication between the client and server. Which services can enable SSL/TLS encryption for the web application?",
+    answers: [
+      { id: 1, text: "Azure Application Gateway" },
+      { id: 2, text: "Azure Traffic Manager" },
+      { id: 3, text: "Azure Load Balancer" },
+      { id: 4, text: "Azure Virtual Machines" },
+    ],
+    answerId: 1,
+  },
+  {
+    id: 85,
+    category: QUESTION_CATEGORIES.AWS,
+    text: "Which services can be used to deploy a multi-tier web application on AWS that requires automatic resource scaling based on traffic?",
+    answers: [
+      { id: 1, text: "Amazon CloudFront" },
+      { id: 2, text: "Amazon EC2 Auto Scaling" },
+      { id: 3, text: "Amazon Elastic Load Balancing (ELB)" },
+      { id: 4, text: "Amazon Route 53" },
+    ],
+    answerId: 2,
+  },
+  {
+    id: 86,
+    category: QUESTION_CATEGORIES.AWS,
+    text: "A web application requires a relational database service that is fully managed, scalable, and highly available. Which services should an organization use to deploy the database?",
+    answers: [
+      { id: 1, text: "Amazon RDS" },
+      { id: 2, text: "Amazon DynamoDB" },
+      { id: 3, text: "Amazon ElastiCache" },
+      { id: 4, text: "Amazon Redshift" },
+    ],
+    answerId: 1,
+  },
+  {
+    id: 87,
+    category: QUESTION_CATEGORIES.AWS,
+    text: "Which AWS services can be used by a company that plans to deploy a highly scalable and fault-tolerant website on AWS that requires processing large amounts of data in real-time? The website will receive millions of requests per day and must be able to handle traffic spikes and be highly available.",
+    answers: [
+      {
+        id: 1,
+        text: "Amazon RDS, Amazon SQS, Amazon EMR, Amazon CloudFront",
+      },
+      { id: 2, text: "Amazon EC2, Amazon RDS, Amazon SNS, AWS Lambda" },
+      {
+        id: 3,
+        text: "Amazon Elastic Beanstalk, Amazon DynamoDB, AWS Lambda, Amazon CloudFront",
+      },
+      {
+        id: 4,
+        text: "Amazon S3, Amazon Kinesis, AWS Lambda, Amazon Route 53",
+      },
+    ],
+    answerId: 3,
+  },
+  {
+    id: 88,
+    category: QUESTION_CATEGORIES.AWS,
+    text: "An on-premises web application requires high availability, fault tolerance, and the ability to scale to handle millions of daily requests. The application must also meet strict compliance and security requirements. An organization is planning to migrate this application to AWS. Which AWS services can be used to deploy the application?",
+    answers: [
+      { id: 1, text: "AWS Elastic Beanstalk, Amazon RDS, AWS Lambda" },
+      {
+        id: 2,
+        text: "Amazon EC2, Amazon Elastic Load Balancer, Amazon Route 53",
+      },
+      { id: 3, text: "AWS CloudFormation, AWS CodeDeploy, AWS CodePipeline" },
+      { id: 4, text: "AWS Elastic Load Balancer, Amazon Aurora, AWS WAF" },
+    ],
+    answerId: 2,
+  },
 ];

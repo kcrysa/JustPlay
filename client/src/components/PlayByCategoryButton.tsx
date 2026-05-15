@@ -7,9 +7,10 @@ import {
 } from "@mui/material";
 import { common } from "@mui/material/colors";
 import { QUESTION_CATEGORIES } from "../models/Question";
-import { BrainteaserIcon } from "./icons/BrainteaserIcon";
-import { TechIcon } from "./icons/TechIcon";
-import { TriviaIcon } from "./icons/TriviaIcon";
+import { AWSIcon } from "./icons/AWSIcon";
+import { GCPIcon } from "./icons/GCPIcon";
+import { PlatformAutomationIcon } from "./icons/PlatformAutomationIcon";
+import { TerraformIcon } from "./icons/TerraformIcon";
 
 const CustomButton = styled(IconButton)<IconButtonProps>(() => ({
   color: common.black,
@@ -36,27 +37,33 @@ const CustomButton = styled(IconButton)<IconButtonProps>(() => ({
 interface IPlayButton {
   category: string;
   onClick: () => void;
+  showLabel?: boolean;
 }
 
-export const PlayByCategoryButton = ({ category, onClick }: IPlayButton) => (
+export const PlayByCategoryButton = ({
+  category,
+  onClick,
+  showLabel = true,
+}: IPlayButton) => (
   <CustomButton onClick={onClick}>
     <Stack alignItems="center">
-      {category === QUESTION_CATEGORIES.TECH && (
-        <TechIcon iconStyle={{ width: 100, height: 100 }} />
+      {category === QUESTION_CATEGORIES.AWS && (
+        <AWSIcon iconStyle={{ width: 100, height: 100 }} />
       )}
-      {category === QUESTION_CATEGORIES.BRAINTEASER && (
-        <BrainteaserIcon iconStyle={{ width: 100, height: 100 }} />
+      {category === QUESTION_CATEGORIES.GCP && (
+        <GCPIcon iconStyle={{ width: 100, height: 100 }} />
       )}
-      {category === QUESTION_CATEGORIES.VOIS && (
-        <TriviaIcon iconStyle={{ width: 100, height: 100 }} />
+      {category === QUESTION_CATEGORIES.TERRAFORM && (
+        <TerraformIcon iconStyle={{ width: 100, height: 100 }} />
       )}
-      <Typography
-        fontSize={22}
-        fontWeight={600}
-        textTransform="uppercase"
-      >
-        {category}
-      </Typography>
+      {category === QUESTION_CATEGORIES.PLATFORMS_AND_AUTOMATION && (
+        <PlatformAutomationIcon iconStyle={{ width: 100, height: 100 }} />
+      )}
+      {showLabel && (
+        <Typography fontSize={16} fontWeight={600} textTransform="uppercase">
+          {category}
+        </Typography>
+      )}
     </Stack>
   </CustomButton>
 );
